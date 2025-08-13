@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewerbung als Beauty Consultant - Barbara Pock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .tab-active {
+            border-color: #A67B5B;
+            color: #A67B5B;
+            font-weight: 600;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6B7280;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold font-serif text-stone-700">
+                Barbara Pock
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#profil" class="text-stone-600 hover:text-amber-800 transition duration-300">Profil</a>
+                <a href="#kompetenzen" class="text-stone-600 hover:text-amber-800 transition duration-300">Kompetenzen</a>
+                <a href="#erfolge" class="text-stone-600 hover:text-amber-800 transition duration-300">Erfolgsbeispiele</a>
+                <a href="#warum-mg" class="text-stone-600 hover:text-amber-800 transition duration-300">Warum Maria Galland?</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-stone-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#profil" class="block py-2 text-stone-600 hover:text-amber-800">Profil</a>
+            <a href="#kompetenzen" class="block py-2 text-stone-600 hover:text-amber-800">Kompetenzen</a>
+            <a href="#erfolge" class="block py-2 text-stone-600 hover:text-amber-800">Erfolgsbeispiele</a>
+            <a href="#warum-mg" class="block py-2 text-stone-600 hover:text-amber-800">Warum Maria Galland?</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] flex items-center justify-center text-white text-center px-4" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1920x1080/d1c7bd/333333?text=Exklusive+Hautpflege') no-repeat center center/cover;">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-wider">Bewerbung als Beauty Consultant</h1>
+                <p class="mt-4 text-xl md:text-2xl font-light">Ihre strategische Partnerin für den Erfolg am Point of Sale.</p>
+            </div>
+        </section>
+
+        <!-- Profil Section -->
+        <section id="profil" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4">Profil: Mehr als nur Beratung</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-12"></div>
+                <div class="max-w-3xl mx-auto text-lg text-stone-700 leading-relaxed">
+                    <p class="mb-4">
+                        Mit langjähriger Erfahrung als Führungskraft im Luxussegment der Kosmetikbranche, von der Counter Managerin bis zur Filialleitung, bringe ich eine seltene Kombination aus strategischem Verkaufsmanagement und gelebter Leidenschaft für exzellente Hautpflege mit. 
+                    </p>
+                    <p class="mb-4">
+                        Meine kaufmännische Ausbildung (HAK) bildet das Fundament für ein tiefes betriebswirtschaftliches Verständnis, das es mir ermöglicht, nicht nur Verkaufsziele zu übertreffen, sondern den Counter als eigene Geschäftseinheit zu führen.
+                    </p>
+                    <p>
+                        Ich verstehe mich als unternehmerisch denkende Partnerin, die durch gezielte Teamführung, effektives POS-Marketing und authentische Vermittlung der Markenphilosophie nachhaltigen Erfolg für Maria Galland sichert.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kompetenzen Section -->
+        <section id="kompetenzen" class="py-20 bg-stone-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">Meine Kompetenzen im Überblick</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-12"></div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <!-- Tabs -->
+                    <div class="flex border-b border-stone-200 mb-8">
+                        <button data-tab="aufgaben" class="tab-button flex-1 py-4 px-2 text-center text-lg border-b-2 transition duration-300 tab-active">
+                            IHRE AUFGABEN
+                        </button>
+                        <button data-tab="profil-anforderungen" class="tab-button flex-1 py-4 px-2 text-center text-lg border-b-2 transition duration-300 tab-inactive">
+                            IHR PROFIL
+                        </button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div id="aufgaben" class="tab-content active">
+                        <div class="space-y-6">
+                            <div class="p-6 bg-white rounded-lg shadow-sm">
+                                <h3 class="text-2xl font-semibold mb-2">Produkttrainings & Verkaufsförderung</h3>
+                                <p class="text-stone-600">Als Multiplikatorin am POS konzipiere und führe ich interaktive Trainings durch, die Teams nicht nur schulen, sondern für die Marke begeistern und den Abverkauf nachweislich steigern.</p>
+                            </div>
+                            <div class="p-6 bg-white rounded-lg shadow-sm">
+                                <h3 class="text-2xl font-semibold mb-2">Aufbau & Pflege von Kundenbeziehungen</h3>
+                                <p class="text-stone-600">Ich bin das Gesicht der Marke für B2B- und Endkunden. Durch proaktive Betreuung und exzellenten Service schaffe ich langfristige, loyale Partnerschaften, die die Sichtbarkeit und den Umsatz sichern.</p>
+                            </div>
+                             <div class="p-6 bg-white rounded-lg shadow-sm">
+                                <h3 class="text-2xl font-semibold mb-2">Markt- & Wettbewerbsanalyse</h3>
+                                <p class="text-stone-600">Als "Augen und Ohren" im Markt liefere ich wertvolle Insights, die zur Optimierung des Portfolios und zur Anpassung der POS-Strategie beitragen, um der Konkurrenz immer einen Schritt voraus zu sein.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="profil-anforderungen" class="tab-content">
+                        <div class="space-y-6">
+                            <div class="p-6 bg-white rounded-lg shadow-sm">
+                                <h3 class="text-2xl font-semibold mb-2">Leidenschaft & Expertise im Luxussegment</h3>
+                                <p class="text-stone-600">Meine langjährige Erfahrung hat mein Verständnis für die anspruchsvolle Luxuskundin geschärft. Ich verkaufe nicht nur Produkte, sondern biete professionelle Konsultationen, die auf Vertrauen und nachgewiesener Expertise basieren.</p>
+                            </div>
+                            <div class="p-6 bg-white rounded-lg shadow-sm">
+                                <h3 class="text-2xl font-semibold mb-2">Kommunikation, Organisation & Reisebereitschaft</h3>
+                                <p class="text-stone-600">Als eigenverantwortliche Außendienstmitarbeiterin manage ich meinen Tag, meine Routen und Prioritäten selbstständig und effizient, um maximale Zeit bei den Kunden zu verbringen und dabei stets professionell zu kommunizieren.</p>
+                            </div>
+                             <div class="p-6 bg-white rounded-lg shadow-sm">
+                                <h3 class="text-2xl font-semibold mb-2">Führungserfahrung & kaufmännisches Denken</h3>
+                                <p class="text-stone-600">Meine HAK-Ausbildung und bewährte Führungserfahrung ermöglichen es mir, Teams zu motivieren, Personaleinsätze effizient zu planen und den wirtschaftlichen Erfolg zu verantworten.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Erfolgsbeispiele (STAR) Section -->
+        <section id="erfolge" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">Erfolge in der Praxis (STAR-Methode)</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-12"></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Story 1 -->
+                    <div class="bg-stone-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-4">Umsatzsteigerung durch Team-Motivation</h3>
+                            <div class="text-stone-700 space-y-3">
+                                <p><strong class="text-amber-800">Situation:</strong> Ein Partner-Institut verzeichnete schwache Verkaufszahlen bei einer neuen, strategisch wichtigen Produktlinie.</p>
+                                <p><strong class="text-amber-800">Task:</strong> Meine Aufgabe war, das Team vor Ort so zu schulen und zu motivieren, dass der Abverkauf innerhalb von 8 Wochen um 20% gesteigert wird.</p>
+                                <p><strong class="text-amber-800">Action:</strong> Ich konzipierte ein interaktives Training, das nicht nur Produkteigenschaften, sondern auch psychologische Verkaufstechniken und Cross-Selling-Strategien umfasste. Zusätzlich führte ich ein kleines, internes Wettbewerbsprogramm ein.</p>
+                                <p><strong class="text-amber-800">Result:</strong> Der Abverkauf der Produktlinie stieg um 25%. Das Team meldete eine signifikant höhere Beratungssicherheit und die Motivation war spürbar gestiegen.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 2 -->
+                    <div class="bg-stone-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-4">Revitalisierung einer B2B-Partnerschaft</h3>
+                             <div class="text-stone-700 space-y-3">
+                                <p><strong class="text-amber-800">Situation:</strong> Ein wichtiger Einzelhändler war unzufrieden mit der bisherigen Betreuung und drohte mit der Auslistung der Marke.</p>
+                                <p><strong class="text-amber-800">Task:</strong> Mein Ziel war, das Vertrauen zurückzugewinnen und den Partner innerhalb von 6 Monaten wieder zu einem loyalen und wachsenden Account zu entwickeln.</p>
+                                <p><strong class="text-amber-800">Action:</strong> Ich etablierte einen fixen monatlichen Jour-Fixe, bot dem Team eine exklusive Schulung an und plante gemeinsam eine Jahres-Marketing-Aktion, die speziell auf seine Kundschaft zugeschnitten war.</p>
+                                <p><strong class="text-amber-800">Result:</strong> Der Umsatz mit diesem Partner verdoppelte sich im Folgejahr. Er wurde zu einem regionalen Vorzeigepartner und empfahl uns aktiv weiter.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 3 -->
+                    <div class="bg-stone-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-4">Effizienzsteigerung im Außendienst</h3>
+                            <div class="text-stone-700 space-y-3">
+                                <p><strong class="text-amber-800">Situation:</strong> Die Planung meiner Touren und das wöchentliche Reporting waren sehr zeitaufwendig und nahmen wertvolle Zeit für die Kundenbetreuung weg.</p>
+                                <p><strong class="text-amber-800">Task:</strong> Ich wollte meinen administrativen Aufwand um mindestens 20% reduzieren, um mehr Zeit für proaktive Kundenentwicklung zu haben.</p>
+                                <p><strong class="text-amber-800">Action:</strong> Mithilfe von Excel und Outlook-Tools erstellte ich mir ein persönliches Dashboard zur optimierten Tourenplanung und standardisierte meine Reporting-Prozesse durch Vorlagen.</p>
+                                <p><strong class="text-amber-800">Result:</strong> Ich konnte eine Zeitersparnis von ca. 3-4 Stunden pro Woche realisieren, was mir ermöglichte, pro Monat zwei zusätzliche strategische Kundentermine wahrzunehmen.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Warum Maria Galland Section -->
+        <section id="warum-mg" class="py-20 bg-stone-100">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4">Warum Maria Galland?</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-12"></div>
+                <div class="max-w-3xl mx-auto text-lg text-stone-700 leading-relaxed">
+                    <p class="mb-6">
+                        Maria Galland verkörpert für mich die perfekte Symbiose aus dermatologisch fundierter Wissenschaft und dem hochpersonalisierten Erlebnis eines Luxus-Instituts. Die Philosophie der "Schönheit in Expertenhänden" und die "Méthode Mosaïque" entsprechen exakt meinem professionellen Selbstverständnis. Ich möchte nicht nur Produkte verkaufen, sondern als Expertin nachhaltige Ergebnisse für anspruchsvolle Kundinnen erzielen.
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-4">Meine Fragen an Sie</h3>
+                    <ul class="text-left list-disc list-inside space-y-2">
+                        <li>Wie definieren Sie "Gestaltungsspielraum" in dieser Rolle konkret, insbesondere bei der Entwicklung lokaler POS-Initiativen?</li>
+                        <li>Welche Entwicklungspfade und Weiterbildungsmöglichkeiten gibt es für einen erfolgreichen Beauty Consultant, um die Expertise stets auf dem neuesten Stand zu halten?</li>
+                        <li>Wie messen Sie den Erfolg in den ersten sechs Monaten, abseits der reinen Verkaufszahlen, insbesondere im Hinblick auf die Entwicklung der Partnerbeziehungen?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-serif mb-2">Kontakt</h3>
+            <p>Barbara Pock</p>
+            <p>Telefon: +43 123 456789 | E-Mail: b.pock@email.com</p>
+            <p class="mt-4 text-sm text-stone-400">&copy; 2025 Barbara Pock - Erstellt zur Bewerbung bei Maria Galland</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Tabs for Kompetenzen
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const tab = this.dataset.tab;
+
+                    // Update button styles
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
+                    this.classList.add('tab-active');
+                    this.classList.remove('tab-inactive');
+
+                    // Show/hide content
+                    tabContents.forEach(content => {
+                        if (content.id === tab) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
