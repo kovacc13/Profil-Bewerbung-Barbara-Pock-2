@@ -15,21 +15,6 @@
         h1, h2, h3, .font-serif {
             font-family: 'Cormorant Garamond', serif;
         }
-        .tab-active {
-            border-color: #A67B5B;
-            color: #A67B5B;
-            font-weight: 600;
-        }
-        .tab-inactive {
-            border-color: transparent;
-            color: #6B7280;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
     </style>
 </head>
 <body class="bg-stone-50 text-stone-800">
@@ -72,19 +57,26 @@
 
         <!-- Profil Section -->
         <section id="profil" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold mb-4">Profil: Mehr als nur Beratung</h2>
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">Profil: Mehr als nur Beratung</h2>
                 <div class="w-24 h-1 bg-amber-700 mx-auto mb-12"></div>
-                <div class="max-w-3xl mx-auto text-lg text-stone-700 leading-relaxed">
-                    <p class="mb-4">
-                        Mit langjähriger Erfahrung als Führungskraft im Luxussegment der Kosmetikbranche, von der Counter Managerin bis zur Filialleitung, bringe ich eine seltene Kombination aus strategischem Verkaufsmanagement und gelebter Leidenschaft für exzellente Hautpflege mit. Um meine Expertise weiter zu vertiefen, absolviere ich aktuell eine umfassende Kosmetikausbildung in Wien.
-                    </p>
-                    <p class="mb-4">
-                        Meine kaufmännische Ausbildung bildet das Fundament für ein tiefes betriebswirtschaftliches Verständnis, das es mir ermöglicht, nicht nur Verkaufsziele zu übertreffen, sondern den Counter als eigene Geschäftseinheit zu führen.
-                    </p>
-                    <p>
-                        Ich verstehe mich als unternehmerisch denkende Partnerin, die durch gezielte Teamführung, effektives POS-Marketing und authentische Vermittlung der Markenphilosophie nachhaltigen Erfolg für Maria Galland sichert.
-                    </p>
+                <div class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
+                    <!-- Image -->
+                    <div class="flex-shrink-0">
+                        <img src="https://i.imgur.com/2tQl5CO.png" alt="Porträt von Barbara Pock" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-lg border-4 border-white">
+                    </div>
+                    <!-- Text -->
+                    <div class="text-lg text-stone-700 leading-relaxed text-center md:text-left">
+                        <p class="mb-4">
+                            Mit langjähriger Erfahrung als Führungskraft im Luxussegment der Kosmetikbranche, von der Counter Managerin bis zur Filialleitung, bringe ich eine seltene Kombination aus strategischem Verkaufsmanagement und gelebter Leidenschaft für exzellente Hautpflege mit. Um meine Expertise weiter zu vertiefen, absolviere ich aktuell eine umfassende Kosmetikausbildung in Wien.
+                        </p>
+                        <p class="mb-4">
+                            Meine kaufmännische Ausbildung bildet das Fundament für ein tiefes betriebswirtschaftliches Verständnis, das es mir ermöglicht, nicht nur Verkaufsziele zu übertreffen, sondern den Counter als eigene Geschäftseinheit zu führen.
+                        </p>
+                        <p>
+                            Ich verstehe mich als unternehmerisch denkende Partnerin, die durch gezielte Teamführung, effektives POS-Marketing und authentische Vermittlung der Markenphilosophie nachhaltigen Erfolg für Maria Galland sichert.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -92,54 +84,41 @@
         <!-- Kompetenzen Section -->
         <section id="kompetenzen" class="py-20 bg-stone-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4">Meine Kompetenzen im Überblick</h2>
+                <h2 class="text-4xl font-bold text-center mb-4">Kompetenzen im Abgleich: Anforderung vs. Erfahrung</h2>
                 <div class="w-24 h-1 bg-amber-700 mx-auto mb-12"></div>
                 
-                <div class="max-w-4xl mx-auto">
-                    <!-- Tabs -->
-                    <div class="flex border-b border-stone-200 mb-8">
-                        <button data-tab="aufgaben" class="tab-button flex-1 py-4 px-2 text-center text-lg border-b-2 transition duration-300 tab-active">
-                            IHRE AUFGABEN
-                        </button>
-                        <button data-tab="profil-anforderungen" class="tab-button flex-1 py-4 px-2 text-center text-lg border-b-2 transition duration-300 tab-inactive">
-                            IHR PROFIL
-                        </button>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm transition hover:shadow-md">
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Anforderung: Produkttrainings & Verkaufsförderung</h3>
+                        <p class="text-stone-700 border-l-4 border-amber-700 pl-4"><strong class="font-semibold text-amber-800">Meine Erfahrung:</strong> Als Multiplikatorin am POS konzipiere und führe ich interaktive Trainings durch, die Teams nicht nur schulen, sondern für die Marke begeistern und den Abverkauf nachweislich steigern.</p>
                     </div>
 
-                    <!-- Tab Content -->
-                    <div id="aufgaben" class="tab-content active">
-                        <div class="space-y-6">
-                            <div class="p-6 bg-white rounded-lg shadow-sm">
-                                <h3 class="text-2xl font-semibold mb-2">Produkttrainings & Verkaufsförderung</h3>
-                                <p class="text-stone-600">Als Multiplikatorin am POS konzipiere und führe ich interaktive Trainings durch, die Teams nicht nur schulen, sondern für die Marke begeistern und den Abverkauf nachweislich steigern.</p>
-                            </div>
-                            <div class="p-6 bg-white rounded-lg shadow-sm">
-                                <h3 class="text-2xl font-semibold mb-2">Aufbau & Pflege von Kundenbeziehungen</h3>
-                                <p class="text-stone-600">Ich bin das Gesicht der Marke für B2B- und Endkunden. Durch proaktive Betreuung und exzellenten Service schaffe ich langfristige, loyale Partnerschaften, die die Sichtbarkeit und den Umsatz sichern.</p>
-                            </div>
-                             <div class="p-6 bg-white rounded-lg shadow-sm">
-                                <h3 class="text-2xl font-semibold mb-2">Markt- & Wettbewerbsanalyse</h3>
-                                <p class="text-stone-600">Als "Augen und Ohren" im Markt liefere ich wertvolle Insights, die zur Optimierung des Portfolios und zur Anpassung der POS-Strategie beitragen, um der Konkurrenz immer einen Schritt voraus zu sein.</p>
-                            </div>
-                        </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm transition hover:shadow-md">
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Anforderung: Aufbau & Pflege von Kundenbeziehungen</h3>
+                        <p class="text-stone-700 border-l-4 border-amber-700 pl-4"><strong class="font-semibold text-amber-800">Meine Erfahrung:</strong> Ich bin das Gesicht der Marke für B2B- und Endkunden. Durch proaktive Betreuung und exzellenten Service schaffe ich langfristige, loyale Partnerschaften, die die Sichtbarkeit und den Umsatz sichern.</p>
                     </div>
 
-                    <div id="profil-anforderungen" class="tab-content">
-                        <div class="space-y-6">
-                            <div class="p-6 bg-white rounded-lg shadow-sm">
-                                <h3 class="text-2xl font-semibold mb-2">Leidenschaft & Expertise im Luxussegment</h3>
-                                <p class="text-stone-600">Meine langjährige Erfahrung hat mein Verständnis für die anspruchsvolle Luxuskundin geschärft. Ich verkaufe nicht nur Produkte, sondern biete professionelle Konsultationen, die auf Vertrauen und nachgewiesener Expertise basieren.</p>
-                            </div>
-                            <div class="p-6 bg-white rounded-lg shadow-sm">
-                                <h3 class="text-2xl font-semibold mb-2">Kommunikation, Organisation & Reisebereitschaft</h3>
-                                <p class="text-stone-600">Als eigenverantwortliche Außendienstmitarbeiterin manage ich meinen Tag, meine Routen und Prioritäten selbstständig und effizient, um maximale Zeit bei den Kunden zu verbringen und dabei stets professionell zu kommunizieren.</p>
-                            </div>
-                             <div class="p-6 bg-white rounded-lg shadow-sm">
-                                <h3 class="text-2xl font-semibold mb-2">Zukünftige Qualifikation</h3>
-                                <p class="text-stone-600">Meine laufende Kosmetikausbildung wird ab dem ersten Quartal 2026 durch die Gewerbeberechtigung ergänzt, was meine fachliche Expertise weiter untermauert und neue Möglichkeiten in der professionellen Kundenberatung eröffnet.</p>
-                            </div>
-                        </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm transition hover:shadow-md">
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Anforderung: Markt- & Wettbewerbsanalyse</h3>
+                        <p class="text-stone-700 border-l-4 border-amber-700 pl-4"><strong class="font-semibold text-amber-800">Meine Erfahrung:</strong> Als "Augen und Ohren" im Markt liefere ich wertvolle Insights, die zur Optimierung des Portfolios und zur Anpassung der POS-Strategie beitragen, um der Konkurrenz immer einen Schritt voraus zu sein.</p>
                     </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm transition hover:shadow-md">
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Anforderung: Leidenschaft, Expertise & gehobener Service</h3>
+                        <p class="text-stone-700 border-l-4 border-amber-700 pl-4"><strong class="font-semibold text-amber-800">Meine Erfahrung:</strong> Meine langjährige Erfahrung hat mein Verständnis für die anspruchsvolle Luxuskundin geschärft. Ich verkaufe nicht nur Produkte, sondern biete professionelle Konsultationen, die auf Vertrauen und nachgewiesener Expertise basieren.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm transition hover:shadow-md">
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Anforderung: Hohe Kommunikationsfähigkeit & Organisationstalent</h3>
+                        <p class="text-stone-700 border-l-4 border-amber-700 pl-4"><strong class="font-semibold text-amber-800">Meine Erfahrung:</strong> Als eigenverantwortliche Außendienstmitarbeiterin manage ich meinen Tag, meine Routen und Prioritäten selbstständig und effizient, um maximale Zeit bei den Kunden zu verbringen und dabei stets professionell zu kommunizieren.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm transition hover:shadow-md">
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Anforderung: Abgeschlossene Ausbildung & Qualifikation</h3>
+                        <p class="text-stone-700 border-l-4 border-amber-700 pl-4"><strong class="font-semibold text-amber-800">Meine Erfahrung:</strong> Meine laufende Kosmetikausbildung wird ab Q1/2026 durch die Gewerbeberechtigung ergänzt, was meine fachliche Expertise weiter untermauert und neue Möglichkeiten in der professionellen Kundenberatung eröffnet.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -223,33 +202,6 @@
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuButton.addEventListener('click', function () {
                 mobileMenu.classList.toggle('hidden');
-            });
-
-            // Tabs for Kompetenzen
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const tab = this.dataset.tab;
-
-                    // Update button styles
-                    tabButtons.forEach(btn => {
-                        btn.classList.remove('tab-active');
-                        btn.classList.add('tab-inactive');
-                    });
-                    this.classList.add('tab-active');
-                    this.classList.remove('tab-inactive');
-
-                    // Show/hide content
-                    tabContents.forEach(content => {
-                        if (content.id === tab) {
-                            content.classList.add('active');
-                        } else {
-                            content.classList.remove('active');
-                        }
-                    });
-                });
             });
         });
     </script>
